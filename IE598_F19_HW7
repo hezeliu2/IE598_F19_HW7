@@ -24,6 +24,10 @@ print(format(fc_cv.best_params_))
 print('Optimal accuracy score ')
 print(format(fc_cv.best_score_))
 
+print(fc_cv.cv_results_['mean_test_score'])
+
+print(fc_cv.cv_results_['mean_fit_time'])
+
 fc = RandomForestClassifier(n_estimators=450)
 fc.fit(X_train,y_train)
 importances = fc.feature_importances_
